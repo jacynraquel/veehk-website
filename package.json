@@ -1,0 +1,9 @@
+{
+  "name": "veehk-website",
+  "scripts": {
+    "compile": "sass --watch --no-source-map ./sass/_main.scss ./css/main.css"
+  },
+  "dependencies": {
+    "sass": "^1.89.2"
+  }
+}

@@ -1,0 +1,44 @@
+// VARIABLES
+$highlight-spans: #FF3F3F;
+$image-size-col: (
+  	max-width: 80%,
+  	height: auto,
+  	object-fit: fill
+);
+
+$main-title: (
+	font-weight: 800,
+	color: #1E1E1E,
+	font-size: 4rem
+	);
+
+$subtitle: (
+	font-family: '"Nunito", sans-serif',
+	font-weight: 400,
+	color: #1E1E1E,
+	font-size: 0.8rem 
+	);
+
+// Whole Body
+span {
+	color: $highlight-spans;
+}
+
+h1 {
+  @each $prop, $val in $main-title {
+    #{$prop}: #{$val};
+  }}
+
+
+// class
+.subtitle{
+	@each $prop, $val in $subtitle {
+		#{$prop}: #{$val};
+	}
+}
+
+.hero {
+	@each $prop, $val in $image-size-col{
+		#{$prop}: #{$val};
+	}
+}
