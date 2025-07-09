@@ -16,7 +16,20 @@ $subtitle: (
 	font-family: '"Nunito", sans-serif',
 	font-weight: 400,
 	color: #1E1E1E,
-	font-size: 0.8rem 
+	font-size: 0.9rem 
+	);
+
+$veehk-button: (
+	background-color: #FF4140,
+	border-radius: 3rem,
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1),
+	padding: 0.5rem 2rem
+	);
+
+$logo-size: (
+	max-width: 50%,
+	height: 60%,
+	width: calc(100% - 40vw)
 	);
 
 // Whole Body
@@ -30,10 +43,17 @@ h1 {
   }}
 
 
-// class
+// CLASS
+
+
+// HERO SECTION
 .subtitle{
 	@each $prop, $val in $subtitle {
 		#{$prop}: #{$val};
+	}
+	&-bold {
+		font-weight: 600;
+		font-size: 1rem;
 	}
 }
 
@@ -42,3 +62,46 @@ h1 {
 		#{$prop}: #{$val};
 	}
 }
+
+.active-button {
+	@each $prop, $val in $veehk-button{
+		#{$prop}: #{$val};
+	}
+	&:hover {
+    background-color: #0056b3;
+    color: #fff !important;
+  }
+  & > button {
+  	color: #fff;
+  	&:hover{
+  		color: #fff;
+  	}
+  }
+}
+
+.logo {
+	@each $prop, $val in $logo-size{
+		#{$prop}: #{$val};
+	}
+}
+
+.navbar-spacing {
+  display: flex;
+  gap: 2rem;
+}
+
+.white-text {
+	color: #fff;
+}
+
+.upper {
+	margin-bottom: calc(100vh - 50vw);
+}
+
+.download-buttons {
+	width: calc(100% - 5vw) !important;
+	height: 100% !important;
+}
+
+
+
