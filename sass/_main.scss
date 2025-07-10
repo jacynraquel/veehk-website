@@ -32,6 +32,8 @@ $logo-size: (
 	width: calc(100% - 40vw)
 	);
 
+
+
 // Whole Body
 span {
 	color: $highlight-spans;
@@ -45,7 +47,6 @@ h1 {
 
 // CLASS
 
-
 // HERO SECTION
 .subtitle{
 	@each $prop, $val in $subtitle {
@@ -54,6 +55,10 @@ h1 {
 	&-bold {
 		font-weight: 600;
 		font-size: 1rem;
+	}
+	&-big {
+		font-size: 1.25rem;
+		font-weight: 400;
 	}
 }
 
@@ -102,6 +107,18 @@ h1 {
 	width: calc(100% - 5vw) !important;
 	height: 100% !important;
 }
+
+
+// HOW IT WOKRS SECTION
+.section {
+
+	&-title {
+		font-weight: 700;
+		font-size: max(18px, 3.125rem, 50px);
+	}
+}
+
+
 
 
 

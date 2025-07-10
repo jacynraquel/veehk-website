@@ -18,6 +18,10 @@ h1 {
   font-weight: 600;
   font-size: 1rem;
 }
+.subtitle-big {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
 
 .hero {
   max-width: 80%;
@@ -64,4 +68,9 @@ h1 {
 .download-buttons {
   width: calc(100% - 5vw) !important;
   height: 100% !important;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: max(18px, 3.125rem, 50px);
 }
