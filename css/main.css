@@ -1,3 +1,7 @@
+section {
+  padding: 1rem;
+}
+
 span {
   color: #FF3F3F;
 }
@@ -6,6 +10,11 @@ h1 {
   font-weight: 800;
   color: #1E1E1E;
   font-size: 4rem;
+}
+
+.gray-section {
+  background-color: #f6f6f6;
+  width: 100%;
 }
 
 .subtitle {
@@ -24,9 +33,13 @@ h1 {
 }
 
 .hero {
-  max-width: 80%;
-  height: auto;
-  object-fit: fill;
+  padding-top: 2rem;
+  padding-bottom: 2 rem;
+}
+.hero-img-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .active-button {
@@ -47,9 +60,9 @@ h1 {
 }
 
 .logo {
-  max-width: 50%;
-  height: 60%;
-  width: calc(100% - 40vw);
+  max-width: 90%;
+  height: 80%;
+  width: calc(100% - 50vw);
 }
 
 .navbar-spacing {
@@ -62,15 +75,93 @@ h1 {
 }
 
 .upper {
-  margin-bottom: calc(100vh - 50vw);
+  padding-bottom: 10%;
 }
 
 .download-buttons {
-  width: calc(100% - 5vw) !important;
+  width: 15rem !important;
   height: 100% !important;
 }
 
 .section-title {
   font-weight: 700;
   font-size: max(18px, 3.125rem, 50px);
+}
+
+.line {
+  width: 5em;
+  height: 0.1em;
+  background-color: #FF3F3F;
+}
+
+.background-circle {
+  background-color: #FF3F3F;
+  border-radius: 50%;
+  width: 20vw;
+  height: 20vw;
+  max-width: 5rem;
+  max-height: 5rem;
+  min-width: 2rem;
+  min-height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-pics {
+  width: calc(5rem - 2.5rem);
+  height: calc(5rem - 2.5rem);
+}
+
+.safety-features-section {
+  background: #f6f6f6;
+}
+.safety-features-section .section-title {
+  font-weight: 700;
+  font-size: 2rem;
+}
+.safety-features-section .section-title span.highlight {
+  color: #FF3F3F;
+}
+.safety-features-section .feature-row {
+  position: relative;
+}
+.safety-features-section .feature-row::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 5%;
+  width: 90%;
+  height: 0.4rem;
+  background-color: #FF3F3F;
+  z-index: 0;
+}
+@media (max-width: 768px) {
+  .safety-features-section .feature-row::before {
+    display: none;
+  }
+}
+.safety-features-section .feature-item {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.safety-features-section .feature-item .feature-icon {
+  background-color: white;
+  border: 0.3rem solid #FF3F3F;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+.safety-features-section .feature-item .feature-title {
+  font-weight: 600;
+  font-size: 1rem;
+}
+.safety-features-section .feature-item .feature-desc {
+  font-size: 0.9rem;
+  color: #444;
 }

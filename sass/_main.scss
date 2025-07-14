@@ -1,11 +1,6 @@
 // VARIABLES
 $highlight-spans: #FF3F3F;
-$image-size-col: (
-  	max-width: 80%,
-  	height: auto,
-  	object-fit: fill
-);
-
+$gray-section: #f6f6f6;
 $main-title: (
 	font-weight: 800,
 	color: #1E1E1E,
@@ -27,25 +22,40 @@ $veehk-button: (
 	);
 
 $logo-size: (
-	max-width: 50%,
-	height: 60%,
-	width: calc(100% - 40vw)
+	max-width: 90%,
+	height: 80%,
+	width: calc(100% - 50vw)
 	);
 
+$equal-size: (
+	max-width: 5rem,
+	max-height: 5rem,
+	min-width: 2rem,
+	min-height: 2rem
+	);
+
+$max-width-equal: map-get($equal-size, max-width);
 
 
 // Whole Body
+section {
+	padding: 1rem;
+}
 span {
 	color: $highlight-spans;
 }
 
 h1 {
-  @each $prop, $val in $main-title {
-    #{$prop}: #{$val};
-  }}
+	@each $prop, $val in $main-title {
+		#{$prop}: #{$val};
+		}}
 
 
 // CLASS
+.gray-section{
+	background-color: $gray-section;
+	width: 100%;
+}
 
 // HERO SECTION
 .subtitle{
@@ -63,9 +73,15 @@ h1 {
 }
 
 .hero {
-	@each $prop, $val in $image-size-col{
-		#{$prop}: #{$val};
-	}
+	padding-top: 2rem;
+	padding-bottom: 2 rem;
+	&-img{
+		&-col{
+			display: flex;
+			align-items: center;
+  		justify-content: center; // remove if you only want vertical centering
+  	}
+  }
 }
 
 .active-button {
@@ -73,15 +89,15 @@ h1 {
 		#{$prop}: #{$val};
 	}
 	&:hover {
-    background-color: #0056b3;
-    color: #fff !important;
-  }
-  & > button {
-  	color: #fff;
-  	&:hover{
-  		color: #fff;
-  	}
-  }
+		background-color: #0056b3;
+		color: #fff !important;
+	}
+	& > button {
+		color: #fff;
+		&:hover{
+			color: #fff;
+		}
+	}
 }
 
 .logo {
@@ -91,8 +107,8 @@ h1 {
 }
 
 .navbar-spacing {
-  display: flex;
-  gap: 2rem;
+	display: flex;
+	gap: 2rem;
 }
 
 .white-text {
@@ -100,23 +116,114 @@ h1 {
 }
 
 .upper {
-	margin-bottom: calc(100vh - 50vw);
+	padding-bottom: 10%;
 }
 
 .download-buttons {
-	width: calc(100% - 5vw) !important;
+	width: 15rem !important;
 	height: 100% !important;
 }
 
 
 // HOW IT WOKRS SECTION
 .section {
-
 	&-title {
 		font-weight: 700;
 		font-size: max(18px, 3.125rem, 50px);
 	}
 }
+
+// WHY SECTION
+.line {
+	width: 5em;
+	height: 0.1em;
+	background-color: $highlight-spans;
+}
+
+.background-circle{
+	background-color: $highlight-spans;
+	border-radius: 50%;
+	width: 20vw;
+	height: 20vw;
+
+	@each $prop, $val in $equal-size{
+		#{$prop}: #{$val};
+	}
+
+	display: flex;
+	align-items: center;
+  justify-content: center; // remove if you only want vertical centering
+}
+
+.icon-pics{
+	width: calc(#{$max-width-equal} - 2.5rem);
+	height: calc(#{$max-width-equal} - 2.5rem);
+}
+
+// Safety Features Section
+.safety-features-section {
+	background: $gray-section;
+
+	.section-title {
+		font-weight: 700;
+		font-size: 2rem;
+		span.highlight {
+			color: #FF3F3F;
+		}
+	}
+
+	.feature-row {
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 40px;
+			left: 5%;
+			width: 90%;
+			height: 0.4rem;
+			background-color: $highlight-spans;
+			z-index: 0;
+		}
+		@media (max-width: 768px) {
+			&::before {
+				display: none;
+			}
+		}
+	}
+
+	.feature-item {
+		text-align: center;
+		position: relative;
+		z-index: 1;
+
+		.feature-icon {
+			background-color: white;
+			border: 0.3rem solid $highlight-spans;
+			border-radius: 50%;
+			width: 80px;
+			height: 80px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 auto 1rem;
+		}
+
+		.feature-title {
+			font-weight: 600;
+			font-size: 1rem;
+		}
+
+		.feature-desc {
+			font-size: 0.9rem;
+			color: #444;
+		}
+	}
+}
+
+
+
+
 
 
 

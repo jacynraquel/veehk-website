@@ -19,32 +19,32 @@
 <body>
 	<!-- HEADER - START -->
 	<nav class="navbar navbar-expand-lg container d-flex align-items-center">
-	  <div class="container-fluid">
-	    <a class=" logo" href="#">
-	          <img src="./images/logo.png" alt="Logo" class="d-inline-block align-text-top">
-	    </a>
-	    <div class="collapse navbar-collapse" id="navbarNav">
-	      <ul class="navbar-nav ms-auto d-flex align-items-center navbar-spacing">
-	        <li class="nav-item">
-	          <a class="nav-link active" aria-current="page" href="#">Home</a>
-	        </li>
-	        <li class="nav-item">
-	          <a class="nav-link" href="#">How it Works</a>
-	        </li>
-	        <li class="nav-item">
-	          <a class="nav-link" href="#">Features</a>
-	        </li>
-	        <li class="active-button">
-	          <button href="#" class="nav-link white-text">Contact Us</button>
-	        </li>
-	      </ul>
-	    </div>
-	  </div>
+		<div class="container-fluid">
+			<a class=" logo" href="#">
+				<img src="./images/logo.png" alt="Logo" class="d-inline-block align-text-top">
+			</a>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ms-auto d-flex align-items-center navbar-spacing">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">How it Works</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Features</a>
+					</li>
+					<li class="active-button">
+						<button href="#" class="nav-link white-text">Contact Us</button>
+					</li>
+				</ul>
+			</div>
+		</div>
 	</nav>
 	<!-- HEADER - END -->
 
 	<!-- HERO SECTION - START -->
-	<section id="hero" class="container">
+	<section id="hero-section" class="container hero">
 		<content class="container-fluid">
 			<div class="row">
 				<!-- First Column of Hero Section -->
@@ -66,8 +66,8 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-6 text-center">
-					<img class="hero img-fluid" src="./images/hero-image.png">
+				<div class="col-6 text-center hero-image-col">
+					<img class="hero-img img-fluid" src="./images/hero-image.png">
 				</div>
 			</div>
 		</content>
@@ -75,9 +75,9 @@
 	<!-- HERO SECTION - END -->
 
 	<!-- HOW IT WORKS SECTION - START -->
-	<section id="how-it-works" class="container">
-		<content class="container-fluid">
-			<div class="row text-center">
+	<section id="how-it-works" class="gray-section">
+		<content class="container py-5 text-center">
+			<div class="row">
 				<h1 class="section-title">
 					How <span>Vheek</span> Works
 				</h1>
@@ -86,13 +86,275 @@
 				</h3>
 			</div>
 			<div class="row">
-				
+				<!-- Part 1 - Mockup -->
+				<div class="col-3">
+					<a href="#">
+						<img src="./images/part1-mockup.webp" class="img-fluid">
+					</a>
+				</div>
+
+				<!-- Part 2 - Mockup -->
+				<div class="col-3">
+					<a href="#">
+						<img src="./images/screenshot.png" class="img-fluid">
+					</a>
+				</div>
+
+				<!-- Part 3 - Mockup -->
+				<div class="col-3">
+					<a href="#">
+						<img src="./images/screenshot.png" class="img-fluid">
+					</a>
+				</div>
+
+				<!-- Part 4 - Mockup -->
+				<div class="col-3">
+					<a href="#" class="active">
+						<img src="./images/screenshot.png" class="img-fluid">
+					</a>
+				</div>
 			</div>
 		</content>
 	</section>
-
 	<!-- HOW IT WORKS SECTION - END -->
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous"></script>
+	<!-- WHY SECTION - RIDERS - START -->
+	<section id="why-section-riders" class="container">
+		<content class="container-fluid">
+			<div class="row">
+				<div class="col-6">
+					<div class="section-title">
+						<h1>Why Riders Choose <span>Veehk</span></h1>
+						<div class="line"></div>
+					</div>
+					<div class="why-info">
+						<!-- Part 1 - Fast & Reliable -->
+						<div class="why-info-parts row">
+							<div class="col-3">
+								<div class="background-circle">
+									<img src="./images/in-transit.webp" class="img-fluid why-pics">
+								</div>
+							</div>
+							<div class="col-9">
+								<div class="d-flex-column">
+									<h3 class="info-title">
+										Fast & Reliable
+									</h3>
+									<p class="info-sentence">
+										Book from your phone and skip the wait.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Part 2 - Fair Pricing-->
+						<div class="why-info-parts row">
+							<div class="col-3">
+								<div class="background-circle">
+									<img src="./images/tag.webp" class="img-fluid why-pics">
+								</div>
+							</div>
+							<div class="col-9">
+								<div class="d-flex-column">
+									<h3 class="info-title">
+										Fair Pricing
+									</h3>
+									<p class="info-sentence">
+										Know your fare before the ride begins.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Part 3 - Safe and Secure -->
+						<div class="why-info-parts row">
+							<div class="col-3">
+								<div class="background-circle">
+									<img src="./images/protect.webp" class="img-fluid why-pics">
+								</div>
+							</div>
+							<div class="col-9">
+								<div class="d-flex-column">
+									<h3 class="info-title">
+										Fair Pricing
+									</h3>
+									<p class="info-sentence">
+										Verified drivers and tracked rides.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Part 4 - Local & Practical -->
+						<div class="why-info-parts row">
+							<div class="col-3">
+								<div class="background-circle">
+									<img src="./images/address.webp" class="img-fluid why-pics">
+								</div>
+							</div>
+							<div class="col-9">
+								<div class="d-flex-column">
+									<h3 class="info-title">
+										Local & Practical
+									</h3>
+									<p class="info-sentence">
+										Designed for everyday Filipino commuters.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<img src="./images/why-riders-pic-big.webp" class="img-fluid">
+				</div>
+			</div>
+		</content>
+	</section>
+	<!-- WHY SECTION - RIDERS - END -->
+
+	<!-- WHY SECTION - DRIVERS - START -->
+	<section id="why-section-drivers" class="gray-section">
+		<content class="container">
+			<div class="row">
+				<div class="col-12 col-md-6">
+					<img src="./images/why-drivers-pic-big.webp" class="img-fluid">
+				</div>
+				<div class="col-12 col-md-6">
+					<div class="section-title">
+						<h1>Why Drivers Choose <span>Veehk</span></h1>
+						<div class="line"></div>
+					</div>
+					<div class="why-info">
+
+						<!-- Part 1 - More Pasahero, More Kita -->
+						<div class="why-info-parts row">
+							<div class="col-3">
+								<div class="background-circle">
+									<img src="./images/cash.webp" class="img-fluid icon-pics">
+								</div>
+							</div>
+							<div class="col-9">
+								<div class="d-flex-column">
+									<h3 class="info-title">
+										More Pasahero, More Kita
+									</h3>
+									<p class="info-sentence">
+										Book from your phone and skip the wait.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Part 2 - Flexible Schedule-->
+						<div class="why-info-parts row">
+							<div class="col-3">
+								<div class="background-circle">
+									<img src="./images/time.webp" class="img-fluid icon-pics">
+								</div>
+							</div>
+							<div class="col-9">
+								<div class="d-flex-column">
+									<h3 class="info-title">
+										Flexible Schedule
+									</h3>
+									<p class="info-sentence">
+										Drive when it works for you.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Part 3 - Real-Time Earnings -->
+						<div class="why-info-parts row">
+							<div class="col-3">
+								<div class="background-circle">
+									<img src="./images/cash.webp" class="img-fluid icon-pics">
+								</div>
+							</div>
+							<div class="col-9">
+								<div class="d-flex-column">
+									<h3 class="info-title">
+										Real-Time Earnings
+									</h3>
+									<p class="info-sentence">
+										Track your income after every ride.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Part 4 - Full Support -->
+						<div class="why-info-parts row">
+							<div class="col-3">
+								<div class="background-circle">
+									<img src="./images/support.webp" class="img-fluid icon-pics">
+								</div>
+							</div>
+							<div class="col-9">
+								<div class="d-flex-column">
+									<h3 class="info-title">
+										Full Support
+									</h3>
+									<p class="info-sentence">
+										We’ve got your back, from sign-up to daily trips.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</content>
+	</section>
+	<!-- WHY SECTION - DRIVERS - END -->
+
+	<!-- SAFETY FEATURES - START -->
+	<section id="safety-features-section" class="gray-section py-5 gray">
+		<div class="container text-center">
+			<h2 class="section-title">Safety <span class="highlight">Features</span></h2>
+
+			<div class="row justify-content-between feature-row mt-4">
+				<!-- Feature Item -->
+				<div class="col-md-3 col-6 mb-4 feature-item">
+					<div class="feature-icon">
+						<img src="./images/verified.webp" alt="Verified" class="img-fluid icon-pics">
+					</div>
+					<h5 class="feature-title">Verified Drivers<br>& Riders</h5>
+					<p class="feature-desc">Background checks and ID validation.</p>
+				</div>
+
+				<div class="col-md-3 col-6 mb-4 feature-item">
+					<div class="feature-icon">
+						<img src="./images/map.webp" alt="GPS" class="img-fluid icon-pics">
+					</div>
+					<h5 class="feature-title">Live GPS<br>Tracking</h5>
+					<p class="feature-desc">Share your trip with family for peace of mind.</p>
+				</div>
+
+				<div class="col-md-3 col-6 mb-4 feature-item">
+					<div class="feature-icon">
+						<img src="./images/alarm.webp" alt="Emergency" class="img-fluid icon-pics">
+					</div>
+					<h5 class="feature-title">Emergency<br>Button</h5>
+					<p class="feature-desc">Fast response when needed.</p>
+				</div>
+
+				<div class="col-md-3 col-6 mb-4 feature-item">
+					<div class="feature-icon">
+						<img src="./images/community-standards.webp" alt="Community" class="img-fluid icon-pics">
+					</div>
+					<h5 class="feature-title">Community<br>Standards</h5>
+					<p class="feature-desc">Respect and safety come first.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<!-- SAFETY FEATURES - END -->
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous"></script>
 </body>
 </html>
