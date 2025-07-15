@@ -31,6 +31,10 @@ h1 {
   font-size: 1.25rem;
   font-weight: 400;
 }
+.subtitle-big-big-bold {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
 
 .hero {
   padding-top: 2rem;
@@ -165,4 +169,30 @@ h1 {
   width: 30px;
   height: 30px;
   background-color: #FF3F3F;
+}
+
+.contact-subtitle {
+  font-size: 1.1rem !important;
+  font-weight: 500;
+}
+
+.email-icon {
+  width: 30px;
+  height: 30px;
+}
+.email-link {
+  text-decoration: none;
+  color: #000;
+}
+
+.social-icon > img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.contact-button {
+  width: 15rem;
+  height: 4rem;
+  border-radius: 10px !important;
 }
