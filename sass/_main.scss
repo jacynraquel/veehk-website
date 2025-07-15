@@ -34,7 +34,6 @@ $equal-size: (
 	min-height: 2rem
 	);
 
-$max-width-equal: map-get($equal-size, max-width);
 
 
 // Whole Body
@@ -156,70 +155,83 @@ h1 {
 }
 
 .icon-pics{
-	width: calc(#{$max-width-equal} - 2.5rem);
-	height: calc(#{$max-width-equal} - 2.5rem);
+	width: calc(5rem - 2.5rem);
+	height: calc(5rem - 2.5rem);
 }
 
 // Safety Features Section
 .safety-features-section {
-	background: $gray-section;
 
-	.section-title {
-		font-weight: 700;
-		font-size: 2rem;
-		span.highlight {
-			color: #FF3F3F;
-		}
-	}
+  // .section-title {
+  //   font-weight: 700;
+  //   font-size: 4rem;
+  //   span.highlight {
+  //     color: #FF3F3F;
+  //   }
+  // }
 
-	.feature-row {
-		position: relative;
+  .feature-row {
+    position: relative;
 
-		&::before {
-			content: '';
-			position: absolute;
-			top: 40px;
-			left: 5%;
-			width: 90%;
-			height: 0.4rem;
-			background-color: $highlight-spans;
-			z-index: 0;
-		}
-		@media (max-width: 768px) {
-			&::before {
-				display: none;
-			}
-		}
-	}
+    &::before {
+      content: '';
+      position: absolute;
+      top: 40px;
+      left: 5%;
+      width: 90%;
+      height: 0.5rem;
+      background-color: $highlight-spans;
+      z-index: 0;
+    }
+    @media (max-width: 768px) {
+		    &::before {
+		      display: none;
+		    }
+ 	 		}	
+  }
 
-	.feature-item {
-		text-align: center;
-		position: relative;
-		z-index: 1;
+  .feature-item {
+    text-align: center;
+    position: relative;
+    z-index: 1;
 
-		.feature-icon {
-			background-color: white;
-			border: 0.3rem solid $highlight-spans;
-			border-radius: 50%;
-			width: 80px;
-			height: 80px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			margin: 0 auto 1rem;
-		}
+    .feature-icon {
+      background-color: white;
+      border: 0.3rem solid $highlight-spans;
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+    }
 
-		.feature-title {
-			font-weight: 600;
-			font-size: 1rem;
-		}
+    .feature-title .faq-title {
+      font-weight: 600;
+      font-size: 1.5rem;
+    }
 
-		.feature-desc {
-			font-size: 0.9rem;
-			color: #444;
-		}
-	}
+    .feature-desc .faq-desc {
+      font-size: 1rem;
+      color: #444;
+    }
+  }
 }
+
+// VEEHK MAP SECTION
+.red-section{
+	background: linear-gradient(to right,  rgba(202, 0, 0, 1), rgba(153, 38, 38, 1));
+	text-align: center;
+}
+
+// FAQ SECTION
+.faq-icon{
+	width: 30px;
+	height: 30px;
+	background-color: $highlight-spans;
+}
+
 
 
 

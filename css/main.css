@@ -109,20 +109,10 @@ h1 {
 }
 
 .icon-pics {
-  width: calc(5rem - 2.5rem);
-  height: calc(5rem - 2.5rem);
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
-.safety-features-section {
-  background: #f6f6f6;
-}
-.safety-features-section .section-title {
-  font-weight: 700;
-  font-size: 2rem;
-}
-.safety-features-section .section-title span.highlight {
-  color: #FF3F3F;
-}
 .safety-features-section .feature-row {
   position: relative;
 }
@@ -132,7 +122,7 @@ h1 {
   top: 40px;
   left: 5%;
   width: 90%;
-  height: 0.4rem;
+  height: 0.5rem;
   background-color: #FF3F3F;
   z-index: 0;
 }
@@ -157,11 +147,22 @@ h1 {
   justify-content: center;
   margin: 0 auto 1rem;
 }
-.safety-features-section .feature-item .feature-title {
+.safety-features-section .feature-item .feature-title .faq-title {
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
-.safety-features-section .feature-item .feature-desc {
-  font-size: 0.9rem;
+.safety-features-section .feature-item .feature-desc .faq-desc {
+  font-size: 1rem;
   color: #444;
+}
+
+.red-section {
+  background: linear-gradient(to right, rgb(202, 0, 0), rgb(153, 38, 38));
+  text-align: center;
+}
+
+.faq-icon {
+  width: 30px;
+  height: 30px;
+  background-color: #FF3F3F;
 }
