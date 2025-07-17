@@ -201,9 +201,23 @@ h1 {
   background: linear-gradient(to right, #FF3F3F, #992626);
   color: white;
 }
+#footer h5 {
+  font-size: 1.7rem;
+}
+#footer button img {
+  width: 15rem;
+  height: auto;
+}
 
 .quick-links {
   text-decoration: none;
   color: white;
   padding: 1rem 0;
+}
+
+.space-elements {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: transparent;
+  border: 0;
 }
