@@ -22,9 +22,8 @@ $veehk-button: (
 	);
 
 $logo-size: (
-	max-width: 90%,
-	height: 80%,
-	width: calc(100% - 50vw)
+	max-width: 100px,
+	height: auto
 	);
 
 $equal-size: (
@@ -47,10 +46,11 @@ span {
 h1 {
 	@each $prop, $val in $main-title {
 		#{$prop}: #{$val};
-		}}
-
+		}
+	}
 
 // CLASS
+
 .gray-section{
 	background-color: $gray-section;
 	width: 100%;
@@ -77,7 +77,7 @@ h1 {
 }
 
 .hero {
-	padding-top: 2rem;
+	padding-top: 1rem;
 	padding-bottom: 2 rem;
 	&-img{
 		&-col{
@@ -85,6 +85,10 @@ h1 {
 			align-items: center;
   		justify-content: center; // remove if you only want vertical centering
   	}
+  }
+
+  &-title{
+  	font-size: clamp(2.5rem, 5vw + 1rem, 5rem);
   }
 }
 
@@ -123,10 +127,30 @@ h1 {
 	padding-bottom: 10%;
 }
 
-.download-buttons {
-	width: 15rem !important;
-	height: 100% !important;
+.download-section{
+	display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: 1rem;
+
+  .download-buttons {
+	 	display: inline-block;
+  	width: clamp(140px, 25vw, 200px);
+  	height: auto; // Maintain aspect ratio
+	}
+
+	// Breakpoint fix at 835px width
+  @media (max-width: 835px) {
+    flex-direction: column;
+    align-items: start;
+
+    .download-buttons {
+      width: 60%;
+      max-width: 300px;
+    }
+  }
 }
+
 
 
 // HOW IT WOKRS SECTION
@@ -147,8 +171,8 @@ h1 {
 .background-circle{
 	background-color: $highlight-spans;
 	border-radius: 50%;
-	width: 20vw;
-	height: 20vw;
+	width: 10rem;
+	height: 10rem;
 
 	@each $prop, $val in $equal-size{
 		#{$prop}: #{$val};
@@ -162,6 +186,22 @@ h1 {
 .icon-pics{
 	width: calc(5rem - 2.5rem);
 	height: calc(5rem - 2.5rem);
+}
+
+.why-info-parts{
+	padding: 0.5rem 0;
+}
+
+.info{
+	padding: 1rem 0;
+
+	&-title{
+		margin:0;
+	}
+
+	&-sentence{
+		margin: 0;
+	}
 }
 
 // Safety Features Section
@@ -255,6 +295,10 @@ h1 {
 	}
 }
 
+.link{
+	text-decoration: none;
+	color: #000;
+}
 .social {
 	&-icon > img {
 		width: 30px;
@@ -291,6 +335,11 @@ h1 {
 	text-decoration: none;
 	color: white;
 	padding: 1rem 0;
+
+	&-ftext{
+		font-size: 1rem !important;
+		color: white;
+	}
 }
 
 .space-elements{
@@ -298,6 +347,10 @@ h1 {
 	padding-bottom: 0.5rem;
 	background-color: transparent;
 	border: 0;
+}
+
+.full-length{
+	height: auto;
 }
 
 
