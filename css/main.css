@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden;
+}
+
 section {
   padding: 1rem;
 }
@@ -47,6 +51,59 @@ h1 {
 }
 .hero-title {
   font-size: clamp(2.5rem, 5vw + 1rem, 5rem);
+  font-weight: 900;
+  position: relative;
+}
+.hero-word {
+  position: relative;
+  display: inline-block;
+}
+.hero .typewriter-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.hero .sup-text {
+  position: absolute;
+  top: -20px;
+  left: 50px;
+  font-size: 1.75rem;
+  font-weight: bold;
+  font-family: "Montserrat", "Open Sans", "Roboto", sans-serif;
+  font-style: italic;
+  color: #FF3F3F;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0ch;
+  max-width: fit-content;
+  border-right: 1px solid #ff4040;
+  z-index: 2;
+}
+.hero .anim-typewriter {
+  animation: typewriter 2.5s steps(8, end) 0.5s forwards, blinkTextCursor 0.5s steps(1) infinite;
+}
+@keyframes typewriter {
+  from {
+    width: 0ch;
+  }
+  to {
+    width: 7ch;
+  }
+}
+@keyframes blinkTextCursor {
+  50% {
+    border-color: transparent;
+  }
+}
+.hero .caret-symbol {
+  font-family: "Mr Dafoe", cursive;
+  font-size: 0.5em;
+  color: #ff4545;
+  transform: translateY(-0.4em);
+  margin-left: -0.1em;
+  margin-right: 0.1em;
+  position: absolute;
+  left: 285px;
+  top: 25px;
 }
 
 .active-button {
@@ -104,6 +161,19 @@ h1 {
     width: 60%;
     max-width: 300px;
   }
+}
+
+#toggle-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+#toggle-btn:hover {
+  background-color: #f8f9fa;
+}
+#toggle-btn.active {
+  background-color: #ffc107;
+  color: #000;
 }
 
 .section-title {

@@ -11,12 +11,14 @@
 	<!-- Google Fonts - Inter -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Mr+Dafoe&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
 	<!-- SASS-converted CSS file -->
 	<link rel="stylesheet" type="text/css" href="./css/main.css">
+
+
 </head>
-<body>
+<body class="p-0 m-0">
 	<!-- HEADER - START -->
 	<nav id="header" class="navbar navbar-expand-lg container d-flex align-items-center pt-5 pb-0">
 		<div class="container-fluid">
@@ -26,16 +28,18 @@
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav ms-auto d-flex align-items-center navbar-spacing">
 					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="#">Home</a>
+						<a class="nav-link active" aria-current="page" href="#hero-section">Home</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">How it Works</a>
+						<a class="nav-link" href="#how-it-works">How it Works</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Features</a>
+						<a class="nav-link" href="#why-veehk">Features</a>
 					</li>
 					<li class="active-button">
-						<button href="#" class="nav-link white-text">Contact Us</button>
+						<a class="nav-link white-text" href="#contact-us">
+							<button type="button" class="nav-link white-text">Contact Us</button>
+						</a>
 					</li>
 				</ul>
 			</div>
@@ -51,8 +55,22 @@
 				<div class="col-6">
 					<div class="upper">
 						<h3>Your Ride, <span>Your Way</span></h3>
-						<h1 class="hero-title">Book A Vehicle Anytime of <span>Veehk </span></h1>
+						<h1 class="hero-title">
+						  Book <span class="hero-word">
+						    A
+						    <span class="sup-text anim-typewriter">special</span>
+						  </span>
+						  <span class="caret-symbol">^</span>
+						  Vehicle Anytime with <span class="highlight">Veehk</span>
+						</h1>
+
 						<p class="subtitle">No more long waits under the sun or uncertain fares, Veehk is your all new-mobile app for booking safe, reliable tricycle rides in seconds — made by Filipinos, for Filipinos.</p>
+
+						<div class="d-flex">
+						  <input type="checkbox" id="switch"class="checkbox" />
+						      <label for="switch" class="toggle"><button id="toggle-btn" class="btn btn-outline-secondary ms-2">Toggle</button>
+						</div>
+
 					</div>
 					<div class="lower">
 						<p class="subtitle-bold">Get ₱20 off your first ride when you sign up today! <span>Download Now!</span></p>
@@ -218,7 +236,7 @@
 		<content class="container p-5 ">
 			<div class="row d-flex align-items-center p-5">
 				<div class="col-12 col-md-6">
-					<img src="./images/why-drivers-pic-big.webp" class="img-fluid">
+					<img src="./images/why-drivers-pic-big.webp" class="img-fluid p-4">
 				</div>
 				<div class="col-12 col-md-6">
 					<div class="pb-5">
