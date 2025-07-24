@@ -18,7 +18,7 @@
 
 
 </head>
-<body class="p-0 m-0">
+<body class="p-0 m-0 drivers-mode">
 	<!-- HEADER - START -->
 	<nav id="header" class="navbar navbar-expand-lg container d-flex align-items-center pt-5 pb-0">
 		<div class="container-fluid">
@@ -66,9 +66,13 @@
 
 						<p class="subtitle">No more long waits under the sun or uncertain fares, Veehk is your all new-mobile app for booking safe, reliable tricycle rides in seconds — made by Filipinos, for Filipinos.</p>
 
-						<div class="d-flex">
-						  <input type="checkbox" id="switch"class="checkbox" />
-						      <label for="switch" class="toggle"><button id="toggle-btn" class="btn btn-outline-secondary ms-2">Toggle</button>
+						<div class="d-flex align-items-center gap-2">
+						  <h6 class="mb-0 text-danger">Riders</h6>
+						  <label class="switch">
+						    <input id="themeToggle" type="checkbox">
+						    <span class="slider round"></span>
+						  </label>
+						  <h6 class="mb-0 text-warning">Drivers</h6>
 						</div>
 
 					</div>
@@ -612,7 +616,25 @@
 
 
 
+<script>
+  const toggle = document.getElementById("themeToggle");
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous"></script>
+  toggle.addEventListener("change", function () {
+    document.body.classList.toggle("drivers-mode", this.checked);
+    localStorage.setItem("driversMode", this.checked); // save preference
+  });
+
+  // Load saved preference on page load
+  window.addEventListener("DOMContentLoaded", () => {
+    const saved = localStorage.getItem("driversMode") === "true";
+    document.body.classList.toggle("drivers-mode", saved);
+    toggle.checked = saved;
+
+    console.log(toggle);
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous">
+</script>
+
 </body>
 </html>
